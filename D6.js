@@ -44,7 +44,7 @@
  
        const changeUrls = function () {
         firstLink.href= "https://www.google.com"
-        firstLink.innerText = "Link di porta alla pagina principale di google"
+        firstLink.innerText = "Link che porta alla pagina principale di google"
         firstLink.target= "_black"
        }
        changeUrls()
@@ -253,10 +253,21 @@
         }
        }
       // hideAllImages()
-      
+
  
        /* EXTRA ESERCIZIO 15
        Crea una funzione che cambi il colore del h2 con id "changeMyColor" con un colore random ad ogni click ricevuto
      */
+    
+       let changeColor = document.getElementById("changeMyColor")
  
-       const changeColorWithRandom = function () {}
+       const changeColorWithRandom = function (mathColor) {
+        changeColor.addEventListener("click", function() {
+             let randomColor1 = Math.floor(Math.random()*251)
+             let randomColor2 = Math.floor(Math.random()*251)
+             let randomColor3 = Math.floor(Math.random()*251)
+            changeColor.style.color= `rgb(${randomColor1}, ${randomColor2}, ${randomColor3})`
+          })
+       }
+      changeColorWithRandom()
+
